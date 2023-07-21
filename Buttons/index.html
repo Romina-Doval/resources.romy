@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Buttons</title>
+</head>
+
+<body>
+
+
+    <h1>Examples Buttons</h1>
+
+
+    <!-- --------------------------- GLOWING BUTTON ---------------------------- -->
+    <div class="container-button">
+        <h2>GLOWING BUTTON</h2>
+        <button class="glowing-btn" style="--clr:#39FF14"><span class="glowing-txt" style="--clr:#39FF14">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#FF44CC"><span class="glowing-txt" style="--clr:#FF44CC">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#0FF0FC"><span class="glowing-txt" style="--clr:#0FF0FC">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#8A2BE2"><span class="glowing-txt" style="--clr:#8A2BE2">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#F28F1C"><span class="glowing-txt" style="--clr:#F28F1C">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#EA00FF"><span class="glowing-txt" style="--clr:#EA00FF">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#FFF01F"><span class="glowing-txt" style="--clr:#FFF01F">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#FF3131"><span class="glowing-txt" style="--clr:#FF3131">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#1F51FF"><span class="glowing-txt" style="--clr:#1F51FF">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#FF1493"><span class="glowing-txt" style="--clr:#FF1493">BUTTON</span></button>
+        <button class="glowing-btn" style="--clr:#F9F9F9"><span class="glowing-txt" style="--clr:#F9F9F9">BUTTON</span></button>
+
+
+
+    </div>
+
+
+    <!-- ----------------------------- NEON BUTTON ----------------------------- -->
+    <div class="container-button">
+        <h2>NEON BUTTON</h2>
+        <button class="neon-btn" style="--clr:#39FF14"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#FF44CC"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#0FF0FC"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#8A2BE2"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#F28F1C"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#EA00FF"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#FFF01F"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#FF3131"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#1F51FF"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#FF1493"><span>Button</span><i></i></button>
+        <button class="neon-btn" style="--clr:#F9F9F9"><span>Button</span><i></i></button>
+    </div>
+
+
+    <!-- ----------------------------- WAWE BUTTON ----------------------------- -->
+    <div class="container-button">
+        <h2>WAWE BUTTON</h2>
+
+            <a href="#" class="link-button btn-wawe button--wawes">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="fish"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <span class="btn-wawe-text">Subscribe</span>
+            </a>
+    </div>
+
+
+    <!-- ------------------------ GLOWING BORDER BUTTON ------------------------ -->
+    <div class="container-button border">
+        <h2>GLOWING BORDER BUTTON </h2>
+        <a href="#" class="link-button" style="--clr:#21ebff">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#39FF14">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#FF44CC">Link Button</a>+
+        <a href="#" class="link-button" style="--clr:#8A2BE2">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#F28F1C">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#FFF01F">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#FF3131">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#1F51FF">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#FF1493">Link Button</a>
+        <a href="#" class="link-button" style="--clr:#F9F9F9">Link Button</a>
+    </div>
+
+    <!-- ----------------------------- LAVA BUTTON ----------------------------- -->
+    <div class="container-button">
+        <h2>LAVA BUTTON</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="gooey">
+                    <!-- in="sourceGraphic" -->
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                    <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                </filter>
+            </defs>
+        </svg>
+    
+        <button id="gooey-button">
+            Subscribe
+            <span class="bubbles">
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+                <span class="bubble2"></span>
+            </span>
+        </button>
+    </div>
+
+    <!-- ---------------------------- LIQUID BUTTON ---------------------------- -->
+    <div class="container-button btn-liquid">
+        <h2>LIQUID BUTTON</h2>
+        <a class="link-button" style="--clr:#4973ff" href="#"><span>Link</span><div class="liquid"></div></a>
+        <a class="link-button" style="--clr:#D7BDE2" href="#"><span>Link</span><div class="liquid"></div></a>
+        <a class="link-button" style="--clr:#D6EAF8" href="#"><span>Link</span><div class="liquid"></div></a>
+        <a class="link-button" style="--clr:#F8BBD0" href="#"><span>Link</span><div class="liquid"></div></a>
+        <a class="link-button" style="--clr:#F06292" href="#"><span>Link</span><div class="liquid"></div></a>
+        <a class="link-button" style="--clr:#52AC00" href="#"><span>Link</span><div class="liquid"></div></a>
+    </div>
+
+    <!-- -------------------------- NEON LIGHT BUTTON -------------------------- -->
+    <div class="container-button btn-neon-light">
+        <h2>NEON LIGHT BUTTON</h2>
+        <a class="link-button" style="--clr:#2196f3"  href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Neon Button
+        </a>
+        <a class="link-button" style="--clr:#FF44CC" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Neon Button
+        </a>
+        <a class="link-button" style="--clr:#FF1900" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Neon Button
+        </a>
+        <a class="link-button" style="--clr:#FF8800" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Neon Button
+        </a>
+        <a class="link-button" style="--clr:#8A2BE2" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Neon Button
+        </a>
+        <a class="link-button" style="--clr:#FF2F8E" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>Neon Button
+        </a>
+    </div>
+
+    <!-- ------------------------ GLOW ON HOVER BUTTON ------------------------- -->
+    <div class="container-button">
+        <h2>GLOW ON HOVER BUTTON</h2>
+        <button class="glow-on-hover" type="button">BUTTON</button>
+    </div>
+
+    <!-- ----------------------------- WAVY BUTTON ----------------------------- -->
+    <div class="container-button">
+        <h2>WAVY BUTTON</h2>
+        <a class="wavy-btn link-button" href="#">BUTTON</a>
+        <a class="wavy-btn wavy-btn-outlined link-button" href="#">BUTTON</a>
+    </div>
+
+    <!-- -------------------------- GLOWING BUTTON 2 --------------------------- -->
+    <div class="container-button glowing2-btn">
+        <h2>GLOWING BUTTON 2</h2>
+        <a class="link-button" href="#" style="--clr: #1e9bff"><span>Button</span><i></i></a>
+        <a class="link-button" href="#" style="--clr: #ff1867"><span>Button</span><i></i></a>
+        <a class="link-button" href="#" style="--clr: #6eff3e"><span>Button</span><i></i></a>
+        <a class="link-button" href="#" style="--clr: #8A2BE2"><span>Button</span><i></i></a>
+        <a class="link-button" href="#" style="--clr: #FFF01F"><span>Button</span><i></i></a>
+    </div>
+    
+
+
+</body>
+
+</html>
