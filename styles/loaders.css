@@ -1,0 +1,476 @@
+  body {
+    background-color: black;
+  }
+
+  .container-loader {
+    width: auto;
+    height: auto;
+    background: black;
+    padding: 40px;
+    margin: 20px 50px;
+    letter-spacing: 1.5px;
+    position: relative;
+  }
+
+  .divisor {
+    background-color: #478da4;
+  }
+
+  .bg-white {
+    background-color: #f9f9f9;
+  }
+
+
+
+  /* -------------------------------------------------------------------------- */
+  /*                                SMILE LOADER                                */
+  /* -------------------------------------------------------------------------- */
+  .smiley {
+    width: 9em;
+    height: 9em;
+  }
+  .smiley__eye1,
+  .smiley__eye2,
+  .smiley__mouth1,
+  .smiley__mouth2 {
+    animation: eye1 3s ease-in-out infinite;
+  }
+  .smiley__eye1,
+  .smiley__eye2 {
+    transform-origin: 64px 64px;
+  }
+  .smiley__eye2 {
+    animation-name: eye2;
+  }
+  .smiley__mouth1 {
+    animation-name: mouth1;
+  }
+  .smiley__mouth2 {
+    animation-name: mouth2;
+    visibility: hidden;
+  }
+  
+ 
+  /* Animations */
+  @keyframes eye1 {
+    from {
+      transform: rotate(-260deg) translate(0, -56px);
+    }
+    50%,
+    60% {
+      animation-timing-function: cubic-bezier(0.17, 0, 0.58, 1);
+      transform: rotate(-40deg) translate(0, -56px) scale(1);
+    }
+    to {
+      transform: rotate(225deg) translate(0, -56px) scale(0.35);
+    }
+  }
+  @keyframes eye2 {
+    from {
+      transform: rotate(-260deg) translate(0, -56px);
+    }
+    50% {
+      transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+    }
+    52.5% {
+      transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1, 0);
+    }
+    55%,
+    70% {
+      animation-timing-function: cubic-bezier(0, 0, 0.28, 1);
+      transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+    }
+    to {
+      transform: rotate(150deg) translate(0, -56px) scale(0.4);
+    }
+  }
+  @keyframes eyeBlink {
+    from,
+    25%,
+    75%,
+    to {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0);
+    }
+  }
+  @keyframes mouth1 {
+    from {
+      animation-timing-function: ease-in;
+      stroke-dasharray: 0 351.86;
+      stroke-dashoffset: 0;
+    }
+    25% {
+      animation-timing-function: ease-out;
+      stroke-dasharray: 175.93 351.86;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      animation-timing-function: steps(1, start);
+      stroke-dasharray: 175.93 351.86;
+      stroke-dashoffset: -175.93;
+      visibility: visible;
+    }
+    75%,
+    to {
+      visibility: hidden;
+    }
+  }
+  @keyframes mouth2 {
+    from {
+      animation-timing-function: steps(1, end);
+      visibility: hidden;
+    }
+    50% {
+      animation-timing-function: ease-in-out;
+      visibility: visible;
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: -351.86;
+    }
+  }
+  
+
+  /* -------------------------------------------------------------------------- */
+  /*                                CIRCLE LOADER                               */
+  /* -------------------------------------------------------------------------- */
+.pl {
+	display: block;
+	width: 9em;
+	height: 9em;
+}
+
+.pl__ring, .pl__ball {
+	animation: ring 2.5s ease-out infinite;
+}
+.pl__ball {
+	animation-name: ball;
+}
+
+
+/* Animation */
+@keyframes ring {
+	from {
+		stroke-dasharray: 0 257 0 0 1 0 0 258;
+	}
+	25% {
+		stroke-dasharray: 0 0 0 0 257 0 258 0;
+	}
+	50%, to {
+		stroke-dasharray: 0 0 0 0 0 515 0 0;
+	}
+}
+
+@keyframes ball {
+	from, 50% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: 1;
+	}
+	64% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -109;
+	}
+	78% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -145;
+	}
+	92% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -157;
+	}
+	57%, 71%, 85%, 99%, to {
+		animation-timing-function: ease-out;
+		stroke-dashoffset: -163;
+	}
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              QUADRATIC LOADER                              */
+/* -------------------------------------------------------------------------- */
+#quadratic {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 100px auto;
+
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.item-1 {
+  background-color: var(--clr);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-2 {
+  background-color: var(--clr);
+  top: 0;
+  right: 0;
+  -webkit-animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-3 {
+  background-color: var(--clr);
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-4 {
+  background-color: var(--clr);
+  bottom: 0;
+  left: 0;
+  -webkit-animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+
+/* Animations */
+@-webkit-keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 100px)} 
+  50% {transform: translate(100px, 100px)} 
+  75% {transform: translate(100px, 0)} 
+}
+
+@keyframes item-1_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, 100px)} 
+  50% {transform: translate(100px, 100px)} 
+  75% {transform: translate(100px, 0)} 
+}
+
+@-webkit-keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-100px, 0)} 
+  50% {transform: translate(-100px, 100px)} 
+  75% {transform: translate(0, 100px)} 
+}
+
+@keyframes item-2_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(-100px, 0)} 
+  50% {transform: translate(-100px, 100px)} 
+  75% {transform: translate(0, 100px)} 
+}
+
+@-webkit-keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -100px)} 
+  50% {transform: translate(-100px, -100px)} 
+  75% {transform: translate(-100px, 0)} 
+}
+
+@keyframes item-3_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(0, -100px)} 
+  50% {transform: translate(-100px, -100px)} 
+  75% {transform: translate(-100px, 0)} 
+}
+
+@-webkit-keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(100px, 0)} 
+  50% {transform: translate(100px, -100px)} 
+  75% {transform: translate(0, -100px)} 
+}
+
+@keyframes item-4_move {
+  0%, 100% {transform: translate(0, 0)} 
+  25% {transform: translate(100px, 0)} 
+  50% {transform: translate(100px, -100px)} 
+  75% {transform: translate(0, -100px)} 
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               TRINITY SPINNER                              */
+/* -------------------------------------------------------------------------- */
+#trinity {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+
+/* Animation */
+@keyframes animation {
+  0% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -105;
+  }
+  50% {
+    stroke-dasharray: 80 10;
+    stroke-dashoffset: -160;
+  }
+  100% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -300;
+  }
+}
+
+#trinity-spinner {
+  transform-origin: center;
+  animation-name: animation;
+  animation-duration: 1.3s;
+  animation-timing-function: cubic-bezier;
+  animation-iteration-count: infinite;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           3D FLIPPING TEXT LOADER                          */
+/* -------------------------------------------------------------------------- */
+.flipping-loader{
+	-webkit-perspective:700px;
+	perspective: 700px;
+  color: red;
+}
+
+.flipping-loader>span{
+	font-size: 60px;
+	font-family: "franklin gothic medium",sans-serif;
+	display: inline-block;
+	animation:flip 2.6s infinite linear;
+	transform-origin:0 70%;
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+}
+
+
+/* Animation */
+@keyframes flip{
+	35%{
+		transform: rotateX(360deg);
+	}
+	100%{
+		transform: rotatex(360deg);
+	}
+}
+
+.flipping-loader>span:nth-child(even){
+	color:white;
+
+}
+
+.flipping-loader>span:nth-child(2){
+	animation-delay: 0.3s;
+}
+
+.flipping-loader>span:nth-child(3){
+	animation-delay: 0.6s;
+}
+
+.flipping-loader>span:nth-child(4){
+	animation-delay: 0.9s;
+}
+
+.flipping-loader>span:nth-child(5){
+	animation-delay: 1.2s;
+}
+
+.flipping-loader>span:nth-child(6){
+	animation-delay: 1.5s
+}
+
+.flipping-loader>span:nth-child(7){
+	animation-delay: 1.8s
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 RING LOADER                                */
+/* -------------------------------------------------------------------------- */
+.container-ring-loader {
+  position: relative;
+  display: flex;
+  height: 200px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring-loader {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: animate-ring 2s linear infinite;
+}
+
+.ring-loader:nth-child(2), 
+.ring-loader:nth-child(4) {
+  filter: hue-rotate(290deg);
+  animation-delay: -1s;
+}
+
+@keyframes animate-ring {
+  0% {
+    transform:  rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ring-loader:nth-child(1)::before, 
+.ring-loader:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(0,255,249,0.4));
+  background-size: 100px 180px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+i {
+  position: absolute;
+  top: 0px;
+  left: 95px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #00fff9;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px #00fff9,
+       0 0 20px #00fff9,
+       0 0 30px #00fff9,
+       0 0 40px #00fff9,
+       0 0 50px #00fff9,
+       0 0 60px #00fff9,
+       0 0 70px #00fff9,
+       0 0 80px #00fff9,
+       0 0 90px #00fff9,
+       0 0 100px #00fff9;
+}
+
+.ring-loader span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #000000;
+  border-radius: 50%;
+  z-index: 1;
+}

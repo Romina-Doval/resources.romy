@@ -1,0 +1,322 @@
+ 
+  .container-text {
+    width:auto;
+    height: auto;
+    display: flex;
+    margin:  30px auto;
+    flex-wrap: wrap;
+  }
+
+  .divisor {
+    background-color: #478da4;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+    font-family: 'Patua One', cursive;
+    margin-right: 20px;
+  }
+ 
+     
+/* -------------------------------------------------------------------------- */
+/*                                TEXT GRADIENT                               */
+/* -------------------------------------------------------------------------- */
+.gradient-text {
+  background: linear-gradient(90deg, #64acff, #3bf0e4);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+ 
+/* -------------------------------------------------------------------------- */
+/*                             ROTATE SHADOWS TEXT                            */
+/* -------------------------------------------------------------------------- */
+.shadows-text {
+  color: #00ffea;
+  font-weight: normal;
+  text-shadow: 0 0 60px #00ffea,
+               0 0 60px #00ffea,
+               0 0 60px #00ffea,
+               0 0 80px #00ffea,
+               0 0 100px #00ffea,
+               0 0 120px #00ffea,
+               0 0 200px #00ffea,
+               0 0 300px #00ffea,
+               0 0 400px #00ffea;
+  animation: animate-shadow 4s linear infinite;
+  font-style: oblique;
+}
+
+@keyframes animate-shadow {
+  0% {
+      filter: hue-rotate(0deg);
+  }
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            FOLDING PAPER EFFECT                            */
+/* -------------------------------------------------------------------------- */
+.folding-paper-text{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.folding-paper-text li {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #858585;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 40px 50px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.folding-paper-text li:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.folding-paper-text li:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.folding-paper-text:hover li:nth-child(odd) {
+  transform: skewY(15deg);
+}
+
+.folding-paper-text:hover li:nth-child(even) {
+  transform: skewY(-15deg);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                BLINKING TEXT                               */
+/* -------------------------------------------------------------------------- */
+.blink-01 {
+  position: relative;
+  animation: blink01 1s infinite alternate;
+}
+
+.blink-01::before {
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  filter: blur(40px);
+  width: 100%;
+  height: 100%;
+  content: '';
+  animation: bg_blink01 1s infinite alternate;
+}
+
+.blink-01::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(20px);
+  content: 'Blinking';
+  animation: blink01 1s infinite alternate;
+}
+
+.blink-02 {
+  position: relative;
+  animation: blink02 1s infinite alternate;
+}
+
+.blink-02::before {
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  filter: blur(40px);
+  width: 100%;
+  height: 100%;
+  content: '';
+  animation: bg_blink02 1s infinite alternate;
+}
+
+.blink-02::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(20px);
+  content: 'Text';
+  animation: blink02 1s infinite alternate;
+}
+@keyframes blink01 {
+ 0% {
+   color: #d937ef;
+ }
+ 100% {
+   color: #7cdfce;
+ }
+}
+
+@keyframes blink02 {
+ 0% {
+   color: #7cdfce;
+ }
+ 100% {
+   color: #d937ef;
+ }
+}
+
+@keyframes bg_blink01 {
+ 0% {
+   filter: blur(40px);
+   background-color: #d937ef;
+ }
+ 100% {
+   filter: blur(40px);
+   background-color: #7cdfce;
+ }
+}
+
+@keyframes bg_blink02 {
+ 0% {
+   filter: blur(40px);
+   background-color: #7cdfce;
+ }
+ 100% {
+   filter: blur(40px);
+   background-color: #d937ef;
+ }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SHAKE EFFECT TEXT                             */
+/* -------------------------------------------------------------------------- */
+#shake {
+  position: relative;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 6px; */
+  color: white;
+  display: inline-block;
+  background-size: 120% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, 
+                    #7794ff, 
+                    #44107A,
+                    #FF1361,
+                    #FFF800);
+  animation: .8s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             GLITCH EFFECT TEXT                             */
+/* -------------------------------------------------------------------------- */
+.glitch-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+}
+
+.glitch {
+  position: relative;
+  color: white;
+  mix-blend-mode: lighten;
+
+  &:before,
+  &:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: black;
+      clip: rect(0, 0, 0, 0);
+  }
+  
+  &:before {
+      left: -1px;
+      text-shadow: 1px 0 rgba(red,0.7);
+  }
+
+  &:after {
+      left: 1px;
+      text-shadow: -1px 0 rgba(blue,0.7);
+  }
+
+  &:hover {
+    &:before {
+      text-shadow: 4px 0 rgba(red,0.7);
+      animation: glitch-loop-1 0.8s infinite ease-in-out alternate-reverse;
+    }
+    &:after {
+      text-shadow: -5px 0 rgba(blue,0.7);
+      animation: glitch-loop-2 0.8s infinite ease-in-out alternate-reverse;
+    }
+  }
+}
+
+@keyframes glitch-loop-1 {
+  0% { clip: rect(36px, 9999px, 9px, 0) }
+  25% { clip: rect(25px, 9999px, 99px, 0) }
+  50% { clip: rect(50px, 9999px, 102px, 0) }
+  75% { clip: rect(30px, 9999px, 92px, 0) }
+  100% { clip: rect(91px, 9999px, 98px, 0) }
+}
+
+@keyframes glitch-loop-2 {
+  0% { top: -1px; left: 1px; clip: rect(65px, 9999px, 119px, 0) }
+  25% { top: -6px; left: 4px; clip: rect(79px, 9999px, 19px, 0) }
+  50% { top: -3px; left: 2px; clip: rect(68px, 9999px, 11px, 0) }
+  75% { top: 0px; left: -4px; clip: rect(95px, 9999px, 53px, 0) }
+  100% { top: -1px; left: -1px; clip: rect(31px, 9999px, 149px, 0) }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                CREATIVE TEXT                               */
+/* -------------------------------------------------------------------------- */
+.creative-text {
+  position: relative;
+  color: #252839;
+  -webkit-text-stroke: 0.1vw #383D52;
+  font-size: 10vh; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.creative-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #1dd781;
+  -webkit-text-stroke: 0vw #383D52;
+  border-right: 2px solid #01FE87;
+  overflow: hidden;
+  animation: animate-creative 6s linear infinite;
+}
+
+@keyframes animate-creative {
+  0%, 10%, 100%{
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
+}
+
